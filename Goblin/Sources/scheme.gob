@@ -1,0 +1,84 @@
+[START_ENUMS]
+[start_enum] Type
+DEFAULT
+CUSTOM
+[end_enum]
+[END_ENUMS]
+[START_MODELS]
+[start_model] Song C+ U+ D- G+ L-
+name String m! ci! ui?
+duration Float m! ci! ui?
+photo String m? ci? ui?
+note String m? ci? ui?
+createdAt AWSDateTime m! ci? ui?
+updatedAt AWSDateTime m! ci? ui?
+sourceAppleID String m! ci! ui? {"index":{"name":"SongBySourceAppleID","factor":"SourceAppleID","inputArgs":["sourceAppleID:String!"]}}
+sourceAppleURL String m! ci! ui? {"index":{"name":"SongBySourceAppleURL","factor":"SourceAppleURL","inputArgs":["sourceAppleURL:String!"]}}
+artists [ArtistSong] m? ci- ui- {"hasMany":{"indexName":"ArtistSongBySong","fields":["id"]}}                  
+albums [AlbumSong] m? ci- ui- {"hasMany":{"indexName":"AlbumSongBySong","fields":["id"]}}                    
+[end_model]
+[start_model] ArtistSong C+ U+ D- G+ L-
+hashCode String m! ci! ui- {"index":{"name":"ArtistSongByHash","factor":"Hash","inputArgs":["artistID:ID!","songID:ID!"]}}
+songID ID m! ci! ui- {"index":{"name":"ArtistSongBySong","factor":"Song","inputArgs":["songID:ID!"]}}                                
+artistID ID m! ci! ui- {"index":{"name":"ArtistSongByArtist","factor":"Artist","inputArgs":["artistID:ID!"]}}
+note String m? ci? ui?
+createdAt AWSDateTime m! ci? ui?
+updatedAt AWSDateTime m! ci? ui?
+song Song m! ci- ui- {"belongsTo":{"fields":["songID"]}}  
+artist Artists m! ci- ui- {"belongsTo":{"fields":["artistID"]}} 
+[end_model]
+[start_model] AlbumSong C+ U+ D- G+ L-
+hashCode String m! ci! ui- {"index":{"name":"AlbumSongByHash","factor":"Hash","inputArgs":["albumID:ID!","songID:ID!"]}}
+songID ID m! ci! ui- {"index":{"name":"AlbumSongBySong","factor":"Song","inputArgs":["songID:ID!"]}}                                  
+albumID ID m! ci! ui- {"index":{"name":"AlbumSongByAlbum","factor":"Album","inputArgs":["albumID:ID!"]}}
+songNumber Float m! ci! ui?
+note String m? ci? ui?
+createdAt AWSDateTime m! ci? ui?
+updatedAt AWSDateTime m! ci? ui?
+song Song m! ci- ui- {"belongsTo":{"fields":["songID"]}}  
+album Albums m! ci- ui- {"belongsTo":{"fields":["artistID"]}} 
+[end_model]
+[start_model] Albums C+ U+ D- G+ L-
+name String m! ci! ui?
+description String m? ci? ui?
+coverPhoto String m? ci? ui?
+quantity Int m! ci! ui?
+soldCount Int m? ci? ui?
+url String m! ci! ui?
+status AlbumStatus m! ci! ui?
+releasedYear AWSDateTime m? ci? ui?
+price Float m? ci? ui?
+currency AlbumCurrency m? ci? ui?
+totalRevenue Float m? ci? ui?
+note Float m? ci? ui?
+createdAt AWSDateTime m! ci? ui?
+updatedAt AWSDateTime m! ci? ui?
+featuredImage String m? ci? ui?
+sourceAppleURL String m? ci? ui?
+songsCount Int m? ci? ui?
+originalQuantity Int m? ci- ui-
+isFeatured IsFeaturedAlbum m? ci- ui? {"index":{"name":"AlbumsByFeatured","sortKeyFields":["createdAt"],"queryField":"listAlbumsByFeatured"}}
+sourceAppleID String m! ci! ui? {"index":{"name":"AlbumSongByHash"}}
+collectors [CollectorAlbums] m? ci- ui- {"hasMany":{"indexName":"CollectorAlbumsByAlbum","fields":["id"]}} 
+artists [ArtistAlbums] m? ci- ui- {"hasMany":{"indexName":"ArtistAlbumsByAlbum","fields":["id"]}} 
+songs [AlbumSong] m? ci- ui- {"hasMany":{"indexName":"AlbumSongByAlbum","fields":["id"]}} 
+[end_model]
+[start_model] Artists C+ U+ D- G+ L-
+userID ID m? ci? ui? {"index":{"name":"ArtistsByUser"}}
+displayedName String m! ci! ui?
+description String m! ci! ui?
+photo String m? ci? ui?
+status ArtistStatus m! ci! ui?
+albumsCount Int m? ci? ui?
+totalRevenue Float m? ci? ui?
+currency ArtistCurrency m? ci? ui?
+note String m? ci? ui?
+birthday AWSDateTime m? ci? ui?
+createdAt AWSDateTime m! ci? ui?
+updatedAt AWSDateTime m! ci? ui?
+sourceAppleID String m! ci! ui? {"index":{"name":"ArtistBySourceAppleID"}}
+albums [ArtistAlbums] m? ci- ui- {"hasMany":{"indexName":"ArtistAlbumsByArtist","fields":["id"]}}
+managers [ManagerArtists] m? ci- ui- {"hasMany":{"indexName":"ManagerArtistsByArtist","fields":["id"]}}
+songs [ArtistSong] m? ci- ui- {"hasMany":{"indexName":"ArtistSongByArtist","fields":["id"]}}
+[end_model]
+[END_MODELS]
