@@ -157,7 +157,7 @@ def generateEnums(enumsTemplates):
 
 def generateGraphql(modelTemplates):
     """
-        Generisace i vratiti graphql u stringu
+        Generate and return graphql as string
     """
 
     models = """"""
@@ -217,10 +217,10 @@ def generateGraphql(modelTemplates):
         if model["LIST"] == "CUSTOM":
             """"""
             queries += f"\n  listSongs(filter: Model{model['name']}FilterInput, limit: Int, nextToken: String): Model{model['name']}Connection @aws_api_key @aws_cognito_user_pools"
-            #### TODO TODO TODO - Generisati Model{model['name']}FilterInput i Model{model['name']}Connection inace nece raditi
+            #### TODO TODO TODO - Need to generate Model{model['name']}FilterInput and Model{model['name']}Connection 
             # Resolver REQ
             # Resolver RES
-            print(" 🆘 🆘 🆘 Genrisanje Model{model['name']}FilterInput i Model{model['name']}Connection nije implemetirano, LIST GENERATOR NIJE POTPUN")
+            print(" 🆘 🆘 🆘 Need to generate Model{model['name']}FilterInput and Model{model['name']}Connection , LIST GENERATOR NOT COMPLETED!")
         else:
             """
             """

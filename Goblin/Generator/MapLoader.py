@@ -3,7 +3,7 @@ import json
 def loadMap(path):
 
     """
-    Ucitava sadrzaj iz kakoste datoteke, te kreira i vraca json.
+    Load scheme.gob and create json dict content
     """
 
     content = {

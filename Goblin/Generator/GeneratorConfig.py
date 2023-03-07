@@ -10,9 +10,7 @@ class GeneratorConfig:
         self.__location = location
         self.__resultsPath = f"{self.__baseLocation}/Results"
         self.__sourcesPath = f"{self.__baseLocation}/Sources"
-        self.mapSrcPath = f"{self.__sourcesPath}/scheme.gob"
-
-
+        self.mapSrcPath = f"{self.__sourcesPath}/schema.gob"
 
         os.makedirs(os.path.join(self.__baseLocation, "Results"), exist_ok=True)
         os.makedirs(os.path.join(self.__baseLocation, "Sources"), exist_ok=True)
@@ -23,7 +21,6 @@ class GeneratorConfig:
         os.makedirs(os.path.join(self.__resultsPath, self.__currentPath, "resolvers"), exist_ok=True)
         os.makedirs(os.path.join(self.__resultsPath, self.__currentPath, "graphql"), exist_ok=True)
         os.makedirs(os.path.join(self.__resultsPath, self.__currentPath, "resources"), exist_ok=True)
-
 
 
         print(self.__baseLocation)
@@ -43,7 +40,7 @@ class GeneratorConfig:
     def saveJsonScheme(self, ctx):
         """
         """
-        with open(os.path.join(self.__resultsPath, self.__currentPath, "graphql", "scheme.json"), "w") as outfile:
+        with open(os.path.join(self.__resultsPath, self.__currentPath, "graphql", "schema.json"), "w") as outfile:
             outfile.write(json.dumps(ctx, indent=4, sort_keys=True)) 
 
     def saveGraphqlScheme(self, ctx):

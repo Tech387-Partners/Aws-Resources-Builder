@@ -1,13 +1,19 @@
 # Goblin
 
-Many developers who use AWS tools such as AppSync and GraphQL are familiar with their shortcomings. When creating a complex project or application, you often need to customize</br> resources, which adds extra work and complexity as you move through different development environments. This process often involves writing extensive code or configuration that</br> repeats across multiple stages or versions of the project.</br></br>
+If you've ever worked with AWS tools and services as a developer, you've probably quickly become familiar with their advantages and disadvantages. If your project is complex, you'll likely need to customize most of the resources to fit your needs. Isolating and customizing resources has proven to be the best practice, but it requires additional coding or other structures where code or configuration is usually repeated.
 
-It has been shown that isolating and customizing resources is the best practice and can be used in various ways. This is where Goblin comes in as a helpful tool for generating the</br> necessary resources from the GraphQL schema, through the CustomResources.json configuration, to the VTL functions.</br></br>
+Goblin was created as a prototype based on the idea of providing a generator for valid content of the necessary resources in order to significantly shorten time, ensure quality and secure content, and ensure its maintenance.
 
-The first version of this tool had the capability to generate GraphQL with all elements, models (types) with defined default and customized resources, required inputs, enums, as</br> well as the complete structure of mutations, subscriptions, and queries. After creating the schema.graphql, it generates a CustomResources.json file with a resolver for each</br> specified mutation or query, as well as a basic function. All VTL resolver functions would also be created with a basic code structure.</br>
+## How Goblin Works
 
-Initially, it was necessary to create a JSON configuration based on which the tool worked. However, due to the large amount of data, it was not practical to use configuration</br> structures such as JSON, YAML, or TOML. A decision was made to create a separate data structure with a unique syntax that is very practical and simple, based on which the basic JSON</br> structure would be created. The current version also has the ability to create specific resources based on GSI settings.</br></br>
+To execute its task, Goblin requires input data on which to work. The initial idea was to use JSON, YAML, or TOML, but because of the need to simplify voluminous information, it was decided to create a completely new standard and syntax for writing the Goblin map. This is the `scheme.gob` file, created on the basis of the `scheme.graphql` file but with much more information formatted according to the protocol.
 
-The short-term vision is for the tool to become a platform that can create and maintain projects, while for a later version it can be improved as a controller for project tracking</br> in all environments, as well as automating the publishing of new versions.</br>
+When started, Goblin loads the `scheme.gob` file and uses the read data to create a JSON object with detailed information on which to continue creating all targeted resources. The items that will be created include:
 
-The reason for developing Goblin is to provide a solution for the challenges developers face when customizing AWS AppSync and GraphQL resources for their projects, by providing an</br> efficient and easy-to-use tool for generating the necessary resources.</br>
+- GraphQL (schema.graphql) with defined models, inputs, mutations, subscriptions, and queries
+- VTL resolvers VTL request & response functions
+- CustomResources.json file with configuration that links the created resources.
+
+The created content will be located in the `Results` directory.
+
+As already noted, Goblin is currently a product prototype, and the goal is for Goblin to one day be developed to the point where it is capable of maintaining full control over projects, as well as their maintenance.
