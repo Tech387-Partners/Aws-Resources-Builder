@@ -44,13 +44,19 @@ This way was chosen as a readable and tidy solution that can fit a lot of comman
 Here is an example of the basic schema.gob map.<br/>
 Currently, it does not support states such as comments, blank lines, and the like, so the map with details and description is in the following section.<br/>
 
+<br>
 <div>
     <img src="https://github.com/Tech387-Partners/Aws-Resources-Builder/blob/master/doc/src/Goblin-db.svg" alt="drawing" width="350"/>
+    <p>svg</p>
 </div>
+
+<br>
 
 <div>
     <img src="https://github.com/Tech387-Partners/Aws-Resources-Builder/blob/master/doc/src/Goblin.png" alt="drawing" width="350"/>
+    <p>png</p>
 </div>
+<br>
 
 
 ```text
