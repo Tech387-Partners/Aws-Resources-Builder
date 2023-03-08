@@ -36,6 +36,14 @@ The syntax and protocol by which the Goblin map is created are an internal stand
 This way was chosen as a readable and tidy solution that can fit a lot of commands into a relatively small text structure so that the instructions for creating resources could be written as simply and precisely as possible.<br/>
 <br>
 
+Below is a database architecture based on which we created the schema.gob, and we expect Goblin to create resources for us.
+
+<br>
+<div>
+    <img src="https://github.com/Tech387-Partners/Aws-Resources-Builder/blob/master/doc/src/goblin-db.png" alt="drawing" width="800"/>
+</div>
+<br>
+
 <details id="#schema.gob">
 <summary><a href="#schema.gob"> 👉 👇 </a> schema.gob <a href="https://github.com/Tech387-Partners/Aws-Resources-Builder/blob/master/Goblin/Sources/schema.gob"> 🔗 link</a></summary>
 
@@ -43,25 +51,6 @@ This way was chosen as a readable and tidy solution that can fit a lot of comman
 
 Here is an example of the basic schema.gob map.<br/>
 Currently, it does not support states such as comments, blank lines, and the like, so the map with details and description is in the following section.<br/>
-
-<br>
-<div>
-    <img src="https://github.com/Tech387-Partners/Aws-Resources-Builder/blob/master/doc/src/goblin-db.png" alt="drawing" width="800"/>
-    <p>new png</p>
-</div>
-<br>
-<div>
-    <img src="https://github.com/Tech387-Partners/Aws-Resources-Builder/blob/master/doc/src/Goblin-db.svg" alt="drawing" width="800"/>
-    <p>svg</p>
-</div>
-
-<br>
-
-<div>
-    <img src="https://github.com/Tech387-Partners/Aws-Resources-Builder/blob/master/doc/src/Goblin.png" alt="drawing" width="800"/>
-    <p>png</p>
-</div>
-<br>
 
 
 ```text
