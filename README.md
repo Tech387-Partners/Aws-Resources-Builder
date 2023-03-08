@@ -34,7 +34,6 @@ schema.gob is the basic map from which Goblin loads data and directives it works
 It is designed following GraphQL but for the purpose of extended functionalities.<br/>
 The syntax and protocol by which the Goblin map is created are an internal standard.<br/>
 This way was chosen as a readable and tidy solution that can fit a lot of commands into a relatively small text structure so that the instructions for creating resources could be written as simply and precisely as possible.<br/>
-
 <br>
 
 <details id="#schema.gob">
@@ -44,6 +43,14 @@ This way was chosen as a readable and tidy solution that can fit a lot of comman
 
 Here is an example of the basic schema.gob map.<br/>
 Currently, it does not support states such as comments, blank lines, and the like, so the map with details and description is in the following section.<br/>
+
+<div>
+    <img src="https://github.com/Tech387-Partners/Aws-Resources-Builder/blob/master/doc/src/Goblin-db.svg" alt="drawing" width="350"/>
+</div>
+
+<div>
+    <img src="https://github.com/Tech387-Partners/Aws-Resources-Builder/blob/master/doc/src/Goblin.png" alt="drawing" width="350"/>
+</div>
 
 
 ```text
