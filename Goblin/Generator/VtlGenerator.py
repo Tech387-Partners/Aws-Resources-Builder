@@ -3,8 +3,6 @@ from config import ActionType
 
 import os
 
-
-
 def getByIndexRequest(fieldname, indexname):
     """
     :param fieldname / email
@@ -109,14 +107,14 @@ def generate(path, template):
 
     """
 {
-                    "name": "sourceAppleID",                        # naziv argumenta
+                    "name": "sourceAppleID",                        # argument name
                     "data_type": GraphqlDataType.String,            # data type
                     "isRequired": True,                             # is required attribute in Model
                     "create_isRequired": True,                      # True = is required attribute in create input, False = no required attribute in create input, None = Remove from create input
                     "update_isRequired": False,                     # True = is required attribute in update input, False = no required attribute in update input, None = Remove from update input
                     "index":{                                       # GSI config
                         "name": "SongBySourceAppleID"               # GSI Name
-                        ,"factor": "SourceAppleID"                  # Index Factor Name. Ako postoji ovaj faktor, automatski se kreira Query.getSongBy{factor}
+                        ,"factor": "SourceAppleID"                  # Index Factor Name. If this factor exists, `Query.getSongBy{factor}` is automatically created.
                         # ,"sortKeyFields":["createdAt"]            # 
                         # ,"queryField":"listSongsBySourceAppleID"  # 
                     }
