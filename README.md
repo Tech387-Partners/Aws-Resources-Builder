@@ -46,14 +46,14 @@ Currently, it does not support states such as comments, blank lines, and the lik
 
 <br>
 <div>
-    <img src="https://github.com/Tech387-Partners/Aws-Resources-Builder/blob/master/doc/src/Goblin-db.svg" alt="drawing" width="350"/>
+    <img src="https://github.com/Tech387-Partners/Aws-Resources-Builder/blob/master/doc/src/Goblin-db.svg" alt="drawing" width="800"/>
     <p>svg</p>
 </div>
 
 <br>
 
 <div>
-    <img src="https://github.com/Tech387-Partners/Aws-Resources-Builder/blob/master/doc/src/Goblin.png" alt="drawing" width="350"/>
+    <img src="https://github.com/Tech387-Partners/Aws-Resources-Builder/blob/master/doc/src/Goblin.png" alt="drawing" width="800"/>
     <p>png</p>
 </div>
 <br>
