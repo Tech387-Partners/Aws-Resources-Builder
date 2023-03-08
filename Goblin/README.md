@@ -206,7 +206,7 @@ Goblin will create a directory named "Results" if it does not already exist, and
 <br>
 
 <details id="#schema.graphql">
-<summary><a href="#schema.graphql"> 👉 👇 </a> schema.graphql   <a href="https://www.google.com/">🔗 link</a></summary>
+<summary><a href="#schema.graphql"> 👉 👇 </a> schema.graphql </summary>
 
 A file named schema.graphql will be created with a clearly defined structure of models, input entities for creating, updating, and deleting items, as well as precisely crafted subscriptions mutations and queries.<br/>
 If we take a closer look, we will see that schema.graphql is generated exactly according to the directives from the schema.gob map where it is clearly defined which resources will be customized and which ones GraphQL will create by default.<br/><br/>
