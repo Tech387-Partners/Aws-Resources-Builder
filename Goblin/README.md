@@ -38,7 +38,7 @@ This way was chosen as a readable and tidy solution that can fit a lot of comman
 <br>
 
 <details id="#schema.gob">
-<summary><a href="#schema.gob"> 👉 👇 </a> schema.gob <a href="https://github.com/Tech387-Partners/Aws-Resources-Builder/blob/25d6dd847a9d72159a66d85028b7cd02d2a773cd/Goblin/Sources/scheme.gob"> 🔗 link</a></summary>
+<summary><a href="#schema.gob"> 👉 👇 </a> schema.gob <a href="https://github.com/Tech387-Partners/Aws-Resources-Builder/blob/master/Goblin/Sources/schema.gob"> 🔗 link</a></summary>
 
 <br>
 
